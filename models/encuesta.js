@@ -6,6 +6,7 @@ const encuestaSchema = new mongoose.Schema({
   calificacionCupo: { type: Number, min: 1, max: 5, required: true },
   calificacionConductor: { type: Number, min: 1, max: 5, required: true },
   calificacionConduccion: { type: Number, min: 1, max: 5, required: true },
+  calificacionServicio: { type: Number, min: 1, max: 5, required: true },
   horaRespuesta: { type: Date, default: Date.now }
 });
 

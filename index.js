@@ -1,12 +1,22 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const dotenv = require('dotenv')
+const cors = require('cors')
 const bodyParser = require('body-parser');
 const Encuesta = require('./models/encuesta');
 
 const app = express();
+app.use(express.json())
+dotenv.config();
 const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
+
+app.use(cors({
+  origin: (origin, callback) => {
+    callback(null, true)
+  }
+}))
 
 mongoose.connect('mongodb://localhost:27017/encuestasAutobus', {
   useNewUrlParser: true,

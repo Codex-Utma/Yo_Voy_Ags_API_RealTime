@@ -4,13 +4,18 @@
   "description": "API from realtime data of Yo Voy Ags App",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "Codex-Utma",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
     "express": "^4.21.2",
     "mongoose": "^8.12.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.7"
   }
 }
