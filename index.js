@@ -46,7 +46,7 @@ app.post('/encuestas', async (req, res) => {
   //Obtener promedios por Id de camion 
   app.get('/promedios/:idCamion', async (req, res) => {
     try {
-      const encuestas = await Encuesta.find({ idCamion: req.params.idCamion });
+      const encuestas = await Encuesta.find({ idCamion: Number(req.params.idCamion) });
   
       if (encuestas.length === 0) {
         return res.status(404).send({ error: 'No se encontraron encuestas para este camión.' });
